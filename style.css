@@ -1,0 +1,272 @@
+*, *:after, *:before {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+#sidebarCollapse {
+  color: #fff;
+  background: transparent;
+  outline: none;
+  margin: 0 20px;
+}
+
+#sidebarCollapse:hover {
+  color: #2abdfc;
+  background: #fff;
+  outline: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+    min-width: 130px;
+    max-width: 130px;
+    margin-top: 0px;
+    height: 100%;
+    background: #ffdf4f;
+    color: #fff;
+    transition: all 0.3s;
+    position: fixed;
+}
+
+
+#navbar-moovle{
+  background-color: #ffdf4f;
+  font-size: 3em;;
+  margin-left: 130px;
+  width: 100%;
+  color: white;
+  letter-spacing: 20px;
+  margin-left: 130px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  padding: 0 40%;
+}
+
+#sidebar .sidebar-header{
+	padding: 10px 0px 10px 40px;
+	background: #ffdf4f ;
+}
+#sidebar ul.components{
+  padding: 0px 0px;
+  width: 100%;
+  margin: 0;
+}
+
+#sidebar ul p{
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+}
+
+#sidebar ul li a{
+	padding: 10px 10px 10px 20px;
+	font-size: 1.1em;
+	display: block;
+    color: #fff;
+    font-weight: bold;
+}
+
+#sidebar ul li a:hover {
+    color: #0b0b0c;
+    background: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul ul{
+  position: absolute;
+  left: 131px;
+  top: 80px;
+  display: none;
+}
+
+#sidebar ul li{
+  width: 100%;
+}
+
+#sidebar ul ul li{
+  width: 130px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+#sidebar ul li:hover > ul{
+  display: block;
+}
+
+.scrolled {
+  display: none;
+  transition: display 1000ms;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #8a5fff;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+#content {
+    width: 100%;
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-top: 70px;
+}
+
+.navbar-brand{
+    text-align: center;
+    line-height: 1em;
+    font-size: 3em;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+}
+
+
+.navbar-brand:hover{
+  color:white;
+}
+
+
+body{
+  background-color: rgb(252, 252, 252);
+}
+
+.container-moovle{
+  margin : 3% 10% 3% 20%;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li{
+  background-color: #ffdf4f;
+  position: relativa;
+  list-style: none;
+  display: inline-block;
+}
+
+.img-gallery{
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.col-nopad{
+  padding:0;
+}
+
+@media (max-width:2000px) {
+  #navbar-moovle{
+    margin-left: 0;
+    padding: 0 45%;
+  }
+  .container-moovle{
+    margin : 3% 10% 3% 20%;
+  }
+
+}
+
+@media (max-width:992px) {
+  #navbar-moovle{
+    margin-left: 0;
+    padding: 0 45%;
+  }
+  .container-moovle{
+    margin : 3% 10% 3% 30%;
+  }
+
+}
+
+
+@media (max-width:768px) {
+  #sidebar {
+    margin-left: -250px;}
+  #sidebar.active{
+	margin-left: 0px;
+  }
+  #navbar-moovle.nofull{
+    margin-left: 130px;
+    padding: 0 10%;
+  }
+  #navbar-moovle{
+    margin-left: 0;
+    padding: 0 30%;
+  }
+  .container-moovle{
+    margin : 3% 10% 3% 20%;
+  }
+  #sidebarCollapse span{
+	display: none;
+  }
+  .card {
+    width:100%;
+  }
+}
+@media (max-width:576px) {
+  #logo {
+    display: none;
+  }
+  .container-moovle{
+    margin : 3% 10% 3% 10%;
+  }
+
+  #navbar-moovle{
+    width: 100%;
+    padding: 0 20%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
